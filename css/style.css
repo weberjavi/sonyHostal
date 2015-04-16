@@ -136,6 +136,7 @@ a {
 }
 .invisible{
     display: none;
+    z-index: -2;
 }
 
 
@@ -145,6 +146,7 @@ a {
     right: 3%;
     top: 3%;
 }
+
 
 body ul {
     position: relative;
@@ -191,9 +193,6 @@ body ul li div{
     margin: 1.66% 0 0 2%;
     overflow:hidden;
     opacity: 0;
-    -moz-transition: all .5s ease-in-out;
-    -webkit-transition: all .5s ease-in-out;
-    transition: all .5s ease-in-out;
 }
 .cuadrado1_activo {
     background-color: blue;
@@ -204,6 +203,9 @@ body ul li div{
     margin: 1.66% 0 0 2%;
     overflow:hidden;
     opacity: 1;
+    -moz-transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
 }
 
 .wrapper{
@@ -239,9 +241,6 @@ body ul li div{
     margin: 1.66% 0 0 2%;
     overflow:hidden;
     opacity: 0;
-    -moz-transition: all .5s ease-in-out;
-    -webkit-transition: all .5s ease-in-out;
-    transition: all .5s ease-in-out;
 }
 .hospedaje_img_activa{
     position: absolute;
@@ -251,9 +250,19 @@ body ul li div{
     overflow:hidden;
     left: 33%;
     opacity: 1;
+    -moz-transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
 }
 /*======================RESTAURANTE===============
 ==================================================*/
+
+#restaurante_img1{
+    background-image: url('../img/sony3.jpg');
+}
+#restaurante_img2{
+    background-image: url('../img/sony4.jpg');
+}
 .cuadrado2 {
     background-color: blue;
     /*float:left;*/
@@ -265,9 +274,6 @@ body ul li div{
     overflow:hidden;
     left: 33%;
     opacity: 0;
-    -moz-transition: all .5s ease-in-out;
-    -webkit-transition: all .5s ease-in-out;
-    transition: all .5s ease-in-out;
 }
 .cuadrado2_activo {
     background-color: blue;
@@ -278,13 +284,11 @@ body ul li div{
     margin: 1.66% 0 0 2%;
     overflow:hidden;
     opacity: 1;
+    -moz-transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
 }
-#restaurante_img1{
-    background-image: url('../img/sony3.jpg');
-}
-#restaurante_img2{
-    background-image: url('../img/sony4.jpg');
-}
+
 .restaurante_img1{
     position: absolute;
     width: 30%;
@@ -293,9 +297,6 @@ body ul li div{
     margin: 1.66% 0 0 2%;
     overflow:hidden;
     opacity: 0;
-    -moz-transition: all .5s ease-in-out;
-    -webkit-transition: all .5s ease-in-out;
-    transition: all .5s ease-in-out;
 }
 .restaurante_img1_activa{
     position: absolute;
@@ -305,6 +306,9 @@ body ul li div{
     overflow:hidden;
     left: 0%;
     opacity: 1;
+    -moz-transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
 }
 .restaurante_img2{
     position: absolute;
@@ -314,9 +318,6 @@ body ul li div{
     margin: 1.66% 0 0 2%;
     overflow:hidden;
     opacity: 0;
-    -moz-transition: all .5s ease-in-out;
-    -webkit-transition: all .5s ease-in-out;
-    transition: all .5s ease-in-out;
 }
 .restaurante_img2_activa{
     position: absolute;
@@ -326,6 +327,9 @@ body ul li div{
     overflow:hidden;
     left: 66%;
     opacity: 1;
+    -moz-transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
 }
 
 /*======================SONY===============
@@ -340,9 +344,6 @@ body ul li div{
     overflow:hidden;
     left: 73%;
     opacity: 0;
-    -moz-transition: all .5s ease-in-out;
-    -webkit-transition: all .5s ease-in-out;
-    transition: all .5s ease-in-out;
 }
 .cuadrado3_activo {
     background-color: blue;
@@ -354,6 +355,9 @@ body ul li div{
     overflow:hidden;
     z-index: 3;
     opacity: 1;
+    -moz-transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
 }
 
 .sony_mapa{
@@ -365,9 +369,6 @@ body ul li div{
     overflow:hidden;
     opacity: 0;
     z-index: -1;
-    -moz-transition: all .5s ease-in-out;
-    -webkit-transition: all .5s ease-in-out;
-    transition: all .5s ease-in-out;
 }
 .sony_mapa_activo{
     position: absolute;
@@ -378,6 +379,9 @@ body ul li div{
     left: 33%;
     opacity: 1;
     z-index: 2;
+    -moz-transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
 }
 
 
@@ -425,10 +429,190 @@ MEDIA QUERIES///////////////////////////////////////////////////////////////////
 
 }
 @media (max-width: 57.1875em){ /* 915px/16px */
+
+
+    #idiomas {
+        margin: 0 auto;
+        text-align: center;
+        display: block;
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        -webkit-transform:translate(-50%, 0%);
+        transform:translate(-50%, 0%);
+    }
+   body ul {
+        -webkit-transform:none;
+        transform:none;
+        margin: 0 auto;
+        width: 300px;
+        text-align: center;
+        top: 3%;
+        display: block;
+    }
+    body ul li{
+        display: block;
+        width: 300px;
+        text-align: center;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    /*======================HOSPEDAJE===============
+==================================================*/
+
+    .cuadrado1 {
+        left: 50%;
+        top: 100px;
+        min-width: 300px;
+        padding-bottom: 33%; /* = width for a 1:1 aspect ratio */
+        margin: 0;
+        -webkit-transform:translate(-50%, 0%);
+        transform:translate(-50%, 0%);
+    }
+    .cuadrado1_activo{
+        top: 150px;
+        opacity: 1;
+    }
+    .hospedaje_img{
+        left: 50%;
+        top: 100px;
+        min-width: 300px;
+        padding-bottom: 33%; /* = width for a 1:1 aspect ratio */
+        margin: 0;
+        -webkit-transform:translate(-50%, 0%);
+        transform:translate(-50%, 0%);
+    }
+    .hospedaje_img_activa{
+        top: 430px;
+        opacity: 1;
+    }
+
+/*======================RESTAURANTE===============
+==================================================*/
+
+    .cuadrado2 {
+        left: 50%;
+        top: 100px;
+        min-width: 300px;
+        padding-bottom: 33%; /* = width for a 1:1 aspect ratio */
+        margin: 0;
+        -webkit-transform:translate(-50%, 0%);
+        transform:translate(-50%, 0%);
+    }
+    .cuadrado2_activo {
+        top: 150px;
+        opacity: 1;
+    }
+
+    .restaurante_img1{
+        left: 50%;
+        top: 100px;
+        min-width: 300px;
+        padding-bottom: 33%; /* = width for a 1:1 aspect ratio */
+        margin: 0;
+        -webkit-transform:translate(-50%, 0%);
+        transform:translate(-50%, 0%);
+    }
+    .restaurante_img1_activa{
+        top: 430px;
+        opacity: 1;
+    }
+    .restaurante_img2{
+        left: 50%;
+        top: 100px;
+        min-width: 300px;
+        padding-bottom: 33%; /* = width for a 1:1 aspect ratio */
+        margin: 0;
+        -webkit-transform:translate(-50%, 0%);
+        transform:translate(-50%, 0%);
+    }
+    .restaurante_img2_activa{
+        top: 720px;
+        opacity: 1;
+        margin-bottom: 20px;
+        z-index: 3;
+    }
+
+    /*======================SONY===============
+==================================================*/
+    .cuadrado3 {
+        left: 50%;
+        top: 100px;
+        min-width: 300px;
+        padding-bottom: 33%; /* = width for a 1:1 aspect ratio */
+        margin: 0;
+        -webkit-transform:translate(-50%, 0%);
+        transform:translate(-50%, 0%);
+    }
+    .cuadrado3_activo {
+        top: 150px;
+        opacity: 1;
+    }
+
+    .sony_mapa{
+        left: 50%;
+        top: 100px;
+        min-width: 300px;
+        padding-bottom: 33%; /* = width for a 1:1 aspect ratio */
+        margin: 0;
+        -webkit-transform:translate(-50%, 0%);
+        transform:translate(-50%, 0%);    
+    }
+    .sony_mapa_activo{
+        top: 430px;
+        opacity: 1;
+        margin-bottom: 20px;
+    }
    
        
 
 }
+
+@media (max-width: 48.75em){ /* 800px/16px */
+   
+  .padding{
+    padding-bottom:40%; 
+  }
+
+}
+
+@media (max-width: 40.625em){ /* 800px/16px */
+   
+  .padding{
+    padding-bottom:46%; 
+  }
+
+}
+@media (max-width: 35.8125em){ /* 800px/16px */
+   
+  .padding{
+    padding-bottom:52%; 
+  }
+
+}
+@media (max-width: 31.5em){ /* 800px/16px */
+   
+  .padding{
+    padding-bottom:60%; 
+  }
+
+}
+@media (max-width: 27.1875em){ /* 800px/16px */
+   
+  .padding{
+    padding-bottom:69%; 
+  }
+
+}
+@media (max-width: 23.75em){ /* 800px/16px */
+   
+  .padding{
+    padding-bottom:76%; 
+  }
+
+}
+
 
 
 
