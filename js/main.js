@@ -1,12 +1,7 @@
 
 	
 
-	var map = L.map("map").setView([42.911974, -8.020], 10);
-	// añade la capa de mapa de OpenStreetMaps
-	L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-	    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-	}).addTo(map);
-	L.marker([42.911980, -8.020]).addTo(map)
+
 
 
 	//Esconde los elementos activos en el momento que se activa otro
@@ -15,6 +10,7 @@
 		$( "#cuadrado1" ).addClass( "cuadrado1_activo" );
 		$( "#hospedaje" ).addClass( "activo" );
 		$( "#hospedaje_img" ).addClass( "hospedaje_img_activa" );
+		$( "#hospedaje_img2" ).addClass( "hospedaje_img2_activa" );
 		if($("#hospedaje" ).hasClass("inactivo")) {
 			$( "#hospedaje" ).removeClass( "inactivo" );
 		}
@@ -27,6 +23,7 @@
 	    	$( "#cuadrado3" ).removeClass( "cuadrado3_activo" );
 		 	$( "#sony" ).addClass( "inactivo" );
 		 	$( "#map" ).removeClass( "sony_mapa_activo" );
+		 	$( "#ubicacion_img" ).removeClass( "ubicacion_img_activa" );
 	    }
 	});
 
@@ -43,9 +40,11 @@
 	    	$( "#hospedaje" ).addClass( "inactivo" );
 			$( "#cuadrado1" ).removeClass( "cuadrado1_activo" );
 	    	$( "#hospedaje_img" ).removeClass( "hospedaje_img_activa" );
+	    	$( "#hospedaje_img2" ).removeClass( "hospedaje_img2_activa" );
 	    	$( "#cuadrado3" ).removeClass( "cuadrado3_activo" );
 		 	$( "#sony" ).addClass( "inactivo" );
 		 	$( "#map" ).removeClass( "sony_mapa_activo" );
+		 	$( "#ubicacion_img" ).removeClass( "ubicacion_img_activa" );
 	    }
 	});
 
@@ -54,6 +53,7 @@
 		$( "#cuadrado3" ).addClass( "cuadrado3_activo" );
 		$( "#sony" ).addClass( "activo" );
 		$( "#map" ).addClass( "sony_mapa_activo" );
+		$( "#ubicacion_img" ).addClass( "ubicacion_img_activa" );
 		if($("#sony" ).hasClass("inactivo")) {
 			$("#sony").removeClass( "inactivo" );
 		}
@@ -62,6 +62,7 @@
 	    	$( "#hospedaje" ).addClass( "inactivo" );
 			$( "#cuadrado1" ).removeClass( "cuadrado1_activo" );
 	    	$( "#hospedaje_img" ).removeClass( "hospedaje_img_activa" );
+	    	$( "#hospedaje_img2" ).removeClass( "hospedaje_img2_activa" );
 	    	$( "#restaurante" ).addClass( "inactivo" );
 			$( "#cuadrado2" ).removeClass( "cuadrado2_activo" );
 	    	$( "#restaurante_img1" ).removeClass( "restaurante_img1_activa" );
@@ -69,5 +70,10 @@
     	}
 	});
 
-
+	var map = L.map("map").setView([42.911974, -8.020], 10);
+	// añade la capa de mapa de OpenStreetMaps
+	L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+	    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+	}).addTo(map);
+	L.marker([42.911980, -8.020]).addTo(map)
 

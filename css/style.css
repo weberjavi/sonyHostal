@@ -172,13 +172,15 @@ body ul li div{
 .wrapper .texto p {
     line-height: 1.5;
     font-size: 1em;
-    font-family: "AndaleMono", monospace;
+    font-family: "AndaleMono", "Andale Mono", monospace;
 }
-
+.restaurante p{
+    font-size: 0.78em !important;
+}
 .wrapper .texto p span{
     line-height: 1.8;
     font-size: 1.66em;
-    font-family: "AndaleMono", monospace;
+    font-family:  "AndaleMono", "Andale Mono", monospace;
 }
 .letra_pequena{
     font-size: 0.9em !important;
@@ -234,7 +236,19 @@ body ul li div{
 #hospedaje_img{
     background-image: url('../img/sony1.jpg');
 }
+#hospedaje_img2{
+    background-image: url('../img/sony2.png');
+}
 .hospedaje_img{
+    position: absolute;
+    width: 30%;
+    left: 0%;
+    padding-bottom: 23%; /* = width for a 1:1 aspect ratio */
+    margin: 1.66% 0 0 2%;
+    overflow:hidden;
+    opacity: 0;
+}
+.hospedaje_img2{
     position: absolute;
     width: 30%;
     left: 0%;
@@ -256,14 +270,27 @@ body ul li div{
     -webkit-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
 }
+.hospedaje_img2_activa{
+    position: absolute;
+    width: 30%;
+    padding-bottom: 23%; /* = width for a 1:1 aspect ratio */
+    margin: 1.66% 0 0 2%;
+    overflow:hidden;
+    left: 66%;
+    opacity: 1;
+    z-index: 2;
+    -moz-transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
 /*======================RESTAURANTE===============
 ==================================================*/
 
 #restaurante_img1{
-    background-image: url('../img/sony3.jpg');
+    background-image: url('../img/sony7.jpg');
 }
 #restaurante_img2{
-    background-image: url('../img/sony4.jpg');
+    background-image: url('../img/sony9.jpg');
 }
 .cuadrado2 {
     background-color: blue;
@@ -388,8 +415,31 @@ body ul li div{
     -webkit-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
 }
-
-
+#ubicacion_img{
+    background-image: url('../img/sony8.jpg');
+}
+.ubicacion_img{
+    position: absolute;
+    width: 30%;
+    left: 66%;
+    padding-bottom: 23%; /* = width for a 1:1 aspect ratio */
+    margin: 1.66% 0 0 2%;
+    overflow:hidden;
+    opacity: 0;
+}
+.ubicacion_img_activa{
+    position: absolute;
+    width: 30%;
+    padding-bottom: 23%; /* = width for a 1:1 aspect ratio */
+    margin: 1.66% 0 0 2%;
+    overflow:hidden;
+    left: 0%;
+    opacity: 1;
+    z-index: 2;
+    -moz-transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
 
 /*///////////////////////////////////////////////////////////////////////////////////////
 MEDIA QUERIES//////////////////////////////////////////////////////////////////////////*/
@@ -428,6 +478,9 @@ MEDIA QUERIES///////////////////////////////////////////////////////////////////
         font-size: 1.383333em;
         font-family: "AndaleMono", monospace;
     }
+    .restaurante p{
+        font-size: 0.70em !important;
+    }
     .letra_pequena{
         font-size: 0.75em !important;
     }
@@ -446,7 +499,7 @@ MEDIA QUERIES///////////////////////////////////////////////////////////////////
     }
     .wrapper .restaurante p {
         line-height: 1.3em;
-        font-size: 0.75em;
+        font-size: 0.65em !important;
         font-family: "AndaleMono", monospace;
     }    
     .padding{
@@ -513,6 +566,21 @@ MEDIA QUERIES///////////////////////////////////////////////////////////////////
         top: 430px;
         opacity: 1;
         margin-bottom: 20px;
+    }
+    .hospedaje_img2{
+        left: 50%;
+        top: 100px;
+        min-width: 300px;
+        padding-bottom: 33%; /* = width for a 1:1 aspect ratio */
+        margin: 0;
+        -webkit-transform:translate(-50%, 0%);
+        transform:translate(-50%, 0%);
+    }
+    .hospedaje_img2_activa{
+        top: 720px;
+        opacity: 1;
+        margin-bottom: 20px;
+        z-index: 3;
     }
 
 /*======================RESTAURANTE===============
@@ -590,7 +658,21 @@ MEDIA QUERIES///////////////////////////////////////////////////////////////////
         opacity: 1;
         margin-bottom: 20px;
     }
-   
+   .ubicacion_img{
+        left: 50%;
+        top: 100px;
+        min-width: 300px;
+        padding-bottom: 33%; /* = width for a 1:1 aspect ratio */
+        margin: 0;
+        -webkit-transform:translate(-50%, 0%);
+        transform:translate(-50%, 0%);
+    }
+    .ubicacion_img_activa{
+        top: 720px;
+        opacity: 1;
+        margin-bottom: 20px;
+        z-index: 3;
+    }
        
 
 }
